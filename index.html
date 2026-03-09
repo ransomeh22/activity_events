@@ -1,0 +1,59 @@
+<!-- Ransome Hudson 3/9/26 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using jQuery Selectors and Events</title>
+    <script src="../resources/jquery-4.0.0.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#button1").click(function(){
+                $("#paragraph").text("The text has been changed using jQuery!");
+            });
+
+            $("#button2").dblclick(function(){
+                $("#paragraph").hide();
+            });
+
+            $("#paragraph").hover(function(){
+                $(this).css("color", "blue");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <h1>Using jQuery Selectors and Events</h1>
+
+    <p id="paragraph">
+        Hover over this paragraph, click the first button, or double-click the second button to see some magic happen
+    </p>
+
+    <button id="button1">Change Text</button>
+    <button id="button2">Hide Paragraph</button>
+
+    <h2>Descriptions:</h2>
+
+    <dl>
+
+    <dt>#paragraph</dt>
+        <dd>
+            This selector targets the paragraph element by its ID and modifies the style when you hover over it
+        </dd>
+
+    <dt>#button1</dt>
+        <dd>
+            This selector targets the first button by its ID and changes the text when you click it
+        </dd>
+
+    <dt>#button2</dt>
+        <dd>
+            This selector targets the second button by its ID and hides the paragraph when you double click
+        </dd>
+
+    </dl>
+</body>
+</html>
